@@ -13,7 +13,7 @@ public class ProjectSourceCode {
 
     public static void main (String[] args) throws IOException{
         //Grab the local tuple file
-        File file = new File("src/project/sourcecode/tupleTest.txt");
+        File file = new File("src/project/sourcecode/tuples.txt");
         
         //Scan the local tuple file so that the data can be used later.
         Scanner scan = new Scanner(file).useDelimiter("[\r\n]+");
@@ -44,20 +44,24 @@ public class ProjectSourceCode {
         
         //The decision tree is made here.
         Node root = decisionTree(attributeList, tupleList);
-        System.out.println("Class majority is " + root.getLabel());
         
-        for(int i = 0;  i < root.getAttributeList().size(); i++){
-            System.out.println("Attribute #" + i + ": " + root.getAttributeList().get(i));
-        } 
+        //for(int i = 0;  i < root.getAttributeList().size(); i++){
+        //    System.out.println("Attribute #" + i + ": " + root.getAttributeList().get(i));
+        //} 
         
-        for(int i = 0;  i < root.getDataSet().size(); i++){
-            System.out.println("Data Object #" + i + ": " + root.getDataSet().get(i).getAll());
-        }
+        //for(int i = 0;  i < root.getDataSet().size(); i++){
+        //    System.out.println("Data Object #" + i + ": " + root.getDataSet().get(i).getAll());
+        //}
         
         //FIXME
         //for(int i = 0;  i < root.nodePointers().size(); i++){
         //    System.out.println("Pointer #" + i + ": " + root.nodePointers().get(i));
         //}
+    }
+    
+    public static String a(String x){
+        x = "def";
+        return x;
     }
     
     //This method goes through the tokenized attributes and stores them in a list.
@@ -81,11 +85,19 @@ public class ProjectSourceCode {
             setLabel(root);
             return root;
         }
-        //FIXME
-        //attributeSelectionMethod();
-        //Label root with splitting_Criterion
+        
+        root.attributeSelectionMethod();
+        root.removeSplittingAttribute();
         //remove splitting_attribute from list
         //For each outcome j of splitting, then make sublevels.
+        //AKA...
+        //10 - for each outcome j of splitting criterion
+        //11 - let Dj be the set of data tuples in D satifying outcome j
+        //12 - if Dj is empty then
+        //13 -  attach a leaf labeled with the majority class in D to node N;
+        //14 - else
+        //15 -  attach the node returned by the Generate_Decision_Tree(Dj, attribute_list) to node N
+        //16 return N
         return root;
     }
     
