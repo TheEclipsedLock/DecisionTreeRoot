@@ -8,7 +8,14 @@ import java.util.Scanner;
 /**
  *
  * @author Ivan Brenes
+ * in collaboration with...
+ * Guirdelle Blaise
+ * Carolina Uribe-Gosselin
+ * Juan Maquilon
+ * Date: 6/11/19
+ * Section: RVCC
  */
+
 public class ProjectSourceCode {
 
     public static void main (String[] args) throws IOException{

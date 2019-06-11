@@ -8,7 +8,14 @@ package project.sourcecode;
 /**
  *
  * @author Ivan Brenes
+ * in collaboration with...
+ * Guirdelle Blaise
+ * Carolina Uribe-Gosselin
+ * Juan Maquilon
+ * Date: 6/11/19
+ * Section: RVCC
  */
+
 public class Tuple {
     //These elements are based off of page 338's table
     private int id;

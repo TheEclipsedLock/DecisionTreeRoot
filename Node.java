@@ -6,7 +6,14 @@ import java.util.HashMap;
 /**
  *
  * @author Ivan Brenes
+ * in collaboration with...
+ * Guirdelle Blaise
+ * Carolina Uribe-Gosselin
+ * Juan Maquilon
+ * Date: 6/11/19
+ * Section: RVCC
  */
+
 public class Node {
     
     //Necessary data for the Node
